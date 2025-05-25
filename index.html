@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tempora - Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/cl2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <nav class="navbar">X
+            <div class="nav-left">
+                <a href="#" class="logo">Tempora</a>
+            </div>
+            <div class="nav-right">
+                <input type="text" placeholder="Enter city" class="search-box" />
+                <button class="searchicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="location"><a href="#"><i class="fa-solid fa-location-crosshairs"></i>Your
+                        Location</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="weather-box">
+        <h1 class="main-heading" id="cityName">Weather in Delhi</h1>
+
+        <section class="temperature-box">
+            <h2>Now</h2>
+            <h1 id="temperature">-- <sup>°</sup>C</h1>
+            <p id="condition">--</p>
+        </section>
+
+        <section class="weather-stats">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Humidity</th>
+                        <th>Pressure</th>
+                        <th>Visibility</th>
+                        <th>Wind Speed</th>
+                        <th>Feels Like</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="humidity">--%</td>
+                        <td id="pressure">-- hPa</td>
+                        <td id="visibility">-- km</td>
+                        <td id="wind">-- kph</td>
+                        <td id="feelsLike">-- <sup>°</sup>C</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="time-container">
+            <div class="time-card">
+                <p>At 6AM</p><img src="Images/sunrise.png" alt="6AM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 9AM</p><img src="Images/morning.png" alt="9AM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 12PM</p><img src="Images/morning.png" alt="12PM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 3PM</p><img src="Images/morning.png" alt="3PM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 6PM</p><img src="Images/sunset.png" alt="6PM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 9PM</p><img src="Images/night.png" alt="9PM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 12AM</p><img src="Images/night.png" alt="12AM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+            <div class="time-card">
+                <p>At 3AM</p><img src="Images/night.png" alt="3AM" />
+                <p>35.1 <sup>°</sup>C</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/aalok__sharma007" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/MasterAalok" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Alok Kumar. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

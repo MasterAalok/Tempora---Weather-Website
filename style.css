@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    color: white;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nav-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 5px 10px;
+    border: 0px solid white;
+    border-radius: 5px;
+}
+
+.nav-right a i {
+    margin-right: 5px;
+    font-size: 23px;
+}
+
+.location {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+
+}
+
+.location:hover {
+
+    background-color: rgb(14, 112, 161);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+.location-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    gap: 20px;
+}
+
+.search-box {
+    padding: 11px 13px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+
+
+.searchicon {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.searchicon:hover {
+    background-color: rgb(14, 112, 161);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+
+}
+
+
+.weather-box {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.temperature-box {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.temperature-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.temperature-box h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.temperature-box p {
+    font-size: 1rem;
+}
+
+.weather-stats {
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.weather-stats table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.weather-stats th,
+.weather-stats td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.time-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.time-card {
+    background: rgba(255, 255, 255, 0.342);
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    width: 110px;
+    backdrop-filter: blur(6px);
+}
+
+.time-card img {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem 0;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.107);
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 37px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: rgb(14, 112, 161);
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 20px;
+    }
+
+    .nav-left .logo {
+        flex: 1;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -40px
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-right input,
+    .nav-right button {
+        width: 100%;
+    }
+
+    .time-container {
+        justify-content: center;
+    }
+
+    .weather-box {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-right {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+        background-color: white;
+        color: black;
+    }
+
+    .search-box::placeholder {
+        color: #666;
+    }
+
+    .search-button,
+    .location-button {
+        width: 100%;
+        background-color: #004aad;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .search-button:hover,
+    .location-button:hover {
+        background-color: #0066cc;
+    }
+
+    .search-button i,
+    .location-button i {
+        font-size: 1.2rem;
+    }
+
+    .location-button {
+        width: 100%;
+        background-color: #004aad;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .location-button:hover {
+        background-color: #0066cc;
+    }
+
+    .location-button i {
+        font-size: 1.2rem;
+    }
+
+}
